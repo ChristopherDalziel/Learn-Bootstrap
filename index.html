@@ -13,8 +13,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css" />
 
 </head>
+
+<style>
+    .alert {
+        margin-bottom: 1px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0px 15px;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+</style>
 
 <body class="h-100">
     <div class="container h-100">
@@ -30,8 +45,11 @@
                         <label class="sr-only" for="email">Username:</label>
                         <input type="text" class="form-control email" id="email" placeholder="Email..." name="email">
                         <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal email - you
-                            will need to use it for verification to log
-                            in.</small>
+                            will need to use it for verification to log in.
+                        </small>
+                        <div class="alert alert-primary" role="alert"> <span class="icon oi oi-info"></span>This will be
+                            your
+                            username</div>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="username">Username:</label>
@@ -47,8 +65,11 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
-                                lol
+                                I accept the
                             </label>
+                            <span>
+                                <a href="#">Terms and Conditions</a>
+                            </span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Signup</button>
                         <!-- End input fields -->
