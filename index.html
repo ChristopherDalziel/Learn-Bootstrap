@@ -22,10 +22,17 @@
             <div class="col-10 col-md-8 col-lg-6 border">
                 <!-- Form -->
                 <form class="border" action="" method="post">
-                    <h1>ANZ</h1>
+                    <h1>ABC</h1>
                     <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
                         Consequuntur qu</p>
                     <!-- Input fields -->
+                    <div class="form-group">
+                        <label class="sr-only" for="email">Username:</label>
+                        <input type="text" class="form-control email" id="email" placeholder="Email..." name="email">
+                        <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal email - you
+                            will need to use it for verification to log
+                            in.</small>
+                    </div>
                     <div class="form-group">
                         <label class="sr-only" for="username">Username:</label>
                         <input type="text" class="form-control username" id="username" placeholder="Username..."
@@ -36,8 +43,15 @@
                         <input type="password" class="form-control password" id="password" placeholder="Password..."
                             name="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <!-- End input fields -->
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                lol
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                        <!-- End input fields -->
                 </form>
                 <!-- Form end -->
             </div>
