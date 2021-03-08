@@ -38,11 +38,17 @@
                 <!-- Form -->
                 <form class="border" action="" method="post">
                     <h1>ABC</h1>
+                    <h2>Lorem ipsum dolor</h2>
                     <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
                         Consequuntur qu</p>
                     <!-- Input fields -->
                     <div class="form-group">
-                        <label class="sr-only" for="email">Username:</label>
+                        <label class="sr-only" for="accountNumber">Account number:</label>
+                        <input type="text" class="form-control accountNumber" id="accountNumber"
+                            placeholder="Account number..." name="accountNumber">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="email">Email:</label>
                         <input type="text" class="form-control email" id="email" placeholder="Email..." name="email">
                         <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal email - you
                             will need to use it for verification to log in.
@@ -52,9 +58,22 @@
                             username</div>
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="username">Username:</label>
-                        <input type="text" class="form-control username" id="username" placeholder="Username..."
-                            name="username">
+                        <label class="sr-only" for="firstName">First Name:</label>
+                        <input type="text" class="form-control firstName" id="firstName" placeholder="First name..."
+                            name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="surname">Surname:</label>
+                        <input type="text" class="form-control surname" id="surname" placeholder="Surname..."
+                            name="surname">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="dateOfBirth">Password:</label>
+                        <input type="text" class="form-control dateOfBirth" id="dateOfBirth"
+                            placeholder="Date of birth..." name="dateOfBirth">
+                        <small id="dateOfBirthHelpBlock" class="form-text text-muted">
+                            DD/MM/YYYY
+                        </small>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="password">Password:</label>
