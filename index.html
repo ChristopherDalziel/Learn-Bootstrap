@@ -19,6 +19,12 @@
 </head>
 
 <style>
+    .box {
+        background-color: #004265;
+        padding: 20px;
+        height: 490px;
+    }
+
     .alert {
         margin-bottom: 1px;
         height: 30px;
@@ -29,14 +35,21 @@
     .icon {
         margin-right: 10px;
     }
+
+    .help1,
+    .help2,
+    .help3 {
+        color: #fff;
+        font-size: 12px;
+    }
 </style>
 
-<body class="h-100">
-    <div class="container h-100">
-        <div class="row h-100 justify-content-center align-items-center border">
-            <div class="col-10 col-md-8 col-lg-6 border">
+<body>
+    <div class="container h-100 mt-5">
+        <div class="row h-100 justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 ">
                 <!-- Form -->
-                <form class="border" action="" method="post">
+                <form class="" action="" method="post">
                     <h1>ABC</h1>
                     <h2>Lorem ipsum dolor</h2>
                     <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
@@ -46,6 +59,9 @@
                         <label class="sr-only" for="accountNumber">Account number:</label>
                         <input type="text" class="form-control accountNumber" id="accountNumber"
                             placeholder="Account number..." name="accountNumber">
+                        <small id="accountNumberHelpBlock" class="form-text text-muted">Check your Welcome Pack or call
+                            us 1800 000 000 for help
+                        </small>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="email">Email:</label>
@@ -61,6 +77,9 @@
                         <label class="sr-only" for="firstName">First Name:</label>
                         <input type="text" class="form-control firstName" id="firstName" placeholder="First name..."
                             name="firstName">
+                        <small id="firstNameHelpBlock" class="form-text text-muted">This is the name that is shown on
+                            your Welcome Pack
+                        </small>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="surname">Surname:</label>
@@ -81,7 +100,12 @@
                             name="password">
                     </div>
                     <div class="form-group">
-                        <div class="form-check">
+                        <label class="sr-only" for="password2">Confirm Password:</label>
+                        <input type="password" class="form-control password" id="password2"
+                            placeholder="Confirm your password..." name="password">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 I accept the
@@ -94,6 +118,33 @@
                         <!-- End input fields -->
                 </form>
                 <!-- Form end -->
+            </div>
+        </div>
+        <div class="border col-lg-3 box">
+            <div class="help1 border-bottom">
+                <h4><span class="icon oi oi-question-mark"></span>Need some help?</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi totam vel, cum reiciendis tenetur
+                    quia ullam soluta. Praesentium minus explicabo ducimus mollitia dolorum, ipsam tenetur, et
+                    voluptatum quae, nostrum atque!
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, rem. Incidunt molestiae
+                    repellendus
+                    et sunt iure perferendis saepe ipsam.
+                </p>
+            </div>
+            <div class="help2 border-bottom">
+                <h4 class="mt-2"><span class="icon oi oi-person"></span>Already registered?</h4>
+                <a href="#" class="btn btn-light btn-sm btn-block mb-3" tabindex="-1" role="button"
+                    aria-disabled="true">Primary
+                    link
+                </a>
+            </div>
+            <div class="help3">
+                <h4 class="mt-2"><span class="icon oi oi-person"></span>You're already a ABC customer?</h4>
+                <a href="#" class="btn btn-light btn-sm btn-block" tabindex="-1" role="button"
+                    aria-disabled="true">Primary
+                    link
+                </a>
             </div>
         </div>
 
