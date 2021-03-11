@@ -115,7 +115,8 @@
                             <span>
                                 <a href="#" class="align-middle">Terms and Conditions</a>
                             </span>
-                            <button type="submit" class="btn btn-primary float-right">Register for access</button>
+                            <button type="submit" id="submitBtn" class="btn btn-primary float-right">Register for
+                                access</button>
                         </div>
                         <!-- End input fields -->
                 </form>
@@ -149,6 +150,10 @@
         </div>
 
         <script>
+            $('#submitBtn').click(function () {
+                window.location.href = '/emailVerificationCode.html';
+                return false;
+            });
         </script>
 
 </body>
