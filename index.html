@@ -13,6 +13,25 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css" />
 </head>
 <style>
+    html {
+        background-image: url("https://free4kwallpapers.com/uploads/originals/2018/11/24/snowy-mountains-wallpaper.jpg");
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        background-color: transparent;
+    }
+
+    form {
+        background-color: white;
+        padding: 10px;
+    }
+
+    #back {
+        color: white;
+    }
+
     #error-message,
     #missingEmail {
         display: none;
@@ -52,6 +71,9 @@
 </style>
 
 <body>
+    <div id="back" class="m-3">
+        <span class="icon oi oi-chevron-left"></span><a href="#">Back to homepage</a>
+    </div>
     <div class="container h-100 mt-5">
         <!-- Registration trouble modal -->
         <div class="modal" id="registrationMessage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
