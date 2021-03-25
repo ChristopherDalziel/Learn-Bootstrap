@@ -13,10 +13,18 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css" />
 </head>
 <style>
+    :root {
+        --anz-primary-blue: #004165;
+        --anz-secondary-blue: #0072AC;
+
+        --white: #fff;
+        --black: #000;
+    }
+
     html {
-        background-image: url("https://free4kwallpapers.com/uploads/originals/2018/11/24/snowy-mountains-wallpaper.jpg");
-        background-size: auto;
-        background-repeat: no-repeat;
+        /* background-image: url("https://free4kwallpapers.com/uploads/originals/2018/11/24/snowy-mountains-wallpaper.jpg"); */
+        /* background-size: auto; */
+        /* background-repeat: no-repeat; */
     }
 
     body {
@@ -71,7 +79,12 @@
         filter: blur(2px);
     }
 
-    footer {
+    header div {
+        background-color: var(--anz-primary-blue);
+    }
+
+    footer div {
+        background-color: var(--anz-secondary-blue);
         position: fixed;
         left: 0;
         bottom: 0;
@@ -81,12 +94,12 @@
 
 <body>
     <header class="bg-light text-center text-lg-start">
-        <div class="text-left p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-left p-3">
             ABC
         </div>
     </header>
-    <footer class="bg-light text-center text-lg-start">
-        <div class="text-left p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <footer class=" bg-light text-center text-lg-start">
+        <div class="text-left p-3">
             ABC
         </div>
     </footer>
@@ -119,7 +132,8 @@
                     <form class="p-4">
                         <h1>ABC</h1>
                         <h2>Lorem ipsum dolor</h2>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
+                        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae,
+                            beatae?
                             Consequuntur qu</p>
                         <div id="error-message" class="alert alert-danger"></div>
                         <!-- Input fields -->
@@ -127,7 +141,8 @@
                             <label class="sr-only" for="accountNumber">Account number:</label>
                             <input type="text" class="form-control accountNumber" id="accountNumber"
                                 placeholder="Account number..." name="accountNumber">
-                            <small id="accountNumberHelpBlock" class="form-text text-muted">Check your Welcome Pack or
+                            <small id="accountNumberHelpBlock" class="form-text text-muted">Check your Welcome
+                                Pack or
                                 call
                                 us 1800 000 000 for help
                             </small>
@@ -136,7 +151,8 @@
                             <label class="sr-only" for="email">Email:</label>
                             <input type="text" class="form-control email" id="email" placeholder="Email..."
                                 name="email">
-                            <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal email -
+                            <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal
+                                email -
                                 you
                                 will need to use it for verification to log in.
                             </small>
@@ -148,7 +164,8 @@
                             <label class="sr-only" for="firstName">First Name:</label>
                             <input type="text" class="form-control firstName" id="firstName" placeholder="First name..."
                                 name="firstName">
-                            <small id="firstNameHelpBlock" class="form-text text-muted">This is the name that is shown
+                            <small id="firstNameHelpBlock" class="form-text text-muted">This is the name that is
+                                shown
                                 on
                                 your Welcome Pack
                             </small>
@@ -201,7 +218,8 @@
                 <form class="p-4">
                     <h1>ABC</h1>
                     <h2>Lorem ipsum dolor</h2>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae,
+                        beatae?
                         Consequuntur qu</p>
                     <!-- Input fields -->
                     <div class="form-group my-4">
@@ -230,14 +248,16 @@
                 <form class="p-4">
                     <h1>ABC</h1>
                     <h2>Lorem ipsum dolor</h2>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, beatae?
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae,
+                        beatae?
                         Consequuntur qu</p>
                     <!-- Input fields -->
                     <div class="form-group my-4">
                         <label class="sr-only" for="verificationCode">Confirm verification code:</label>
                         <input type="text" class="form-control" id="verificationCode"
                             placeholder="Confirm your verification code..." name="verificationCode">
-                        <small id="emailVerificationHelpBlock" class="form-text text-muted">Check your email for a
+                        <small id="emailVerificationHelpBlock" class="form-text text-muted">Check your email for
+                            a
                             verification code
                         </small>
                     </div>
@@ -269,7 +289,8 @@
                     <label class="sr-only" for="passwordResetVerifcationCode">Confirm verification code:</label>
                     <input type="text" class="form-control" id="passwordResetVerifcationCode"
                         placeholder="Confirm your verification code..." name="passwordResetVerifcationCode">
-                    <small id="emailVerificationHelpBlock" class="form-text text-muted">Check your mobile phone for a
+                    <small id="emailVerificationHelpBlock" class="form-text text-muted">Check your mobile phone
+                        for a
                         verification
                         code
                     </small>
@@ -300,7 +321,8 @@
             </div>
             <div class="form-group my-4">
                 <div class="form-check">
-                    <button id="passwordResetBtn" type="submit" class="btn btn-primary float-right">Request verifcation
+                    <button id="passwordResetBtn" type="submit" class="btn btn-primary float-right">Request
+                        verifcation
                         code</button>
                 </div>
                 <!-- End input fields -->
