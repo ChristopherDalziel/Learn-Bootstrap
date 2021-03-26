@@ -7,6 +7,9 @@
     <title>Sign In with Auth0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -16,15 +19,8 @@
     :root {
         --anz-primary-blue: #004165;
         --anz-secondary-blue: #0072AC;
-
         --white: #fff;
         --black: #000;
-    }
-
-    html {
-        /* background-image: url("https://free4kwallpapers.com/uploads/originals/2018/11/24/snowy-mountains-wallpaper.jpg"); */
-        /* background-size: auto; */
-        /* background-repeat: no-repeat; */
     }
 
     body {
@@ -34,6 +30,7 @@
     form {
         background-color: white;
         padding: 10px;
+        border: solid grey 1px;
     }
 
     #back,
