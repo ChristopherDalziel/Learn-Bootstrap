@@ -72,8 +72,7 @@
     }
 
     .box {
-        background-color: #004265;
-        /* padding: 20px; */
+        background-color: var(--anz-primary-blue);
     }
 
     .alert {
@@ -91,7 +90,7 @@
     .help2,
     .help3,
     .help4 {
-        color: #fff;
+        color: var(--white);
         font-size: 12px;
     }
 
@@ -162,45 +161,45 @@
                         <div id="error-message" class="alert alert-danger"></div>
                         <!-- Input fields -->
                         <div class="form-group my-4">
-                            <label class="sr-only" for="accountNumber">Account number:</label>
+                            <label for="accountNumber">Account number</label>
                             <input type="text" class="form-control accountNumber" id="accountNumber"
                                 placeholder="Account number..." name="accountNumber">
-                            <small id="accountNumberHelpBlock" class="form-text text-muted">Check your Welcome
+                            <!-- <small id="accountNumberHelpBlock" class="form-text text-muted">Check your Welcome
                                 Pack or
                                 call
                                 us 1800 000 000 for help
-                            </small>
+                            </small> -->
                         </div>
                         <div class="form-group my-4">
-                            <label class="sr-only" for="email">Email:</label>
+                            <label for="email">Email</label>
                             <input type="text" class="form-control email" id="email" placeholder="Email..."
                                 name="email">
-                            <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal
+                            <!-- <small id="emailHelpBlock" class="form-text text-muted">Make sure it's your personal
                                 email -
                                 you
                                 will need to use it for verification to log in.
-                            </small>
-                            <div class="alert alert-primary" role="alert"> <span class="icon oi oi-info"></span>This
+                            </small> -->
+                            <!-- <div class="alert alert-primary" role="alert"> <span class="icon oi oi-info"></span>This
                                 will be your username
-                            </div>
+                            </div> -->
                         </div>
                         <div class="form-group my-4">
-                            <label class="sr-only" for="firstName">First Name:</label>
+                            <label for="firstName">First Name:</label>
                             <input type="text" class="form-control firstName" id="firstName" placeholder="First name..."
                                 name="firstName">
-                            <small id="firstNameHelpBlock" class="form-text text-muted">This is the name that is
+                            <!-- <small id="firstNameHelpBlock" class="form-text text-muted">This is the name that is
                                 shown
                                 on
                                 your Welcome Pack
-                            </small>
+                            </small> -->
                         </div>
                         <div class="form-group my-4">
-                            <label class="sr-only" for="surname">Surname:</label>
+                            <label for="surname">Surname</label>
                             <input type="text" class="form-control surname" id="surname" placeholder="Surname..."
                                 name="surname">
                         </div>
-                        <div class="form-group my-4">
-                            <label class="sr-only" for="dateOfBirth">Password:</label>
+                        <div class="form-group my-2">
+                            <label for="dateOfBirth">Date of birth</label>
                             <input type="text" class="form-control dateOfBirth" id="dateOfBirth"
                                 placeholder="Date of birth..." name="dateOfBirth">
                             <small id="dateOfBirthHelpBlock" class="form-text text-muted">
@@ -208,7 +207,7 @@
                             </small>
                         </div>
                         <div class="form-group my-4">
-                            <label class="sr-only" for="password">Password:</label>
+                            <label for="password">Create your password</label>
                             <input type="password" class="form-control password" id="password" placeholder="Password..."
                                 name="password">
                             <div id="passwordRequirementsModal" class="border mt-1">
@@ -221,7 +220,7 @@
                             </div>
                         </div>
                         <div class="form-group my-4">
-                            <label class="sr-only" for="password2">Confirm Password:</label>
+                            <label for="password2">Confirm your password</label>
                             <input type="password" class="form-control password" id="password2"
                                 placeholder="Confirm your password..." name="password">
                         </div>
