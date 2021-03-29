@@ -40,7 +40,8 @@
 
 
     #error-message,
-    #missingEmail {
+    #missingEmail,
+    #passwordRequirementsModal {
         display: none;
     }
 
@@ -184,7 +185,7 @@
                             <label class="sr-only" for="password">Password:</label>
                             <input type="password" class="form-control password" id="password" placeholder="Password..."
                                 name="password">
-                            <div class="border mt-1">
+                            <div id="passwordRequirementsModal" class="border mt-1">
                                 <p>Your password is not strong enough</p>
                                 <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
                                 <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
@@ -411,6 +412,14 @@
             $("#forgotPasswordBtn").click(function () {
                 $("#loginForm").hide();
                 $("#passwordResetForm").show();
+            })
+
+            $("#password").focus(function () {
+                $("#passwordRequirementsModal").css("display", "block");
+            })
+
+            $("#password").blur(function () {
+                $("#passwordRequirementsModal").css("display", "none");
             })
 
             var config = JSON.parse(
