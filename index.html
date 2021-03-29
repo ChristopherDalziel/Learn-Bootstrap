@@ -40,9 +40,13 @@
 
 
     #error-message,
-    #missingEmail,
+    #missingEmail {
+        display: none;
+    }
+
     #passwordRequirementsModal {
         display: none;
+        padding: 10px 10px 0 10px;
     }
 
     /* Add a green text color and a checkmark when the requirements are right */
@@ -51,8 +55,8 @@
     }
 
     .valid:before {
-        position: relative;
-        left: -35px;
+        padding: 5px;
+        margin-right: 15px;
         content: "✔";
     }
 
@@ -62,8 +66,8 @@
     }
 
     .invalid:before {
-        position: relative;
-        left: -35px;
+        padding: 5px;
+        margin-right: 15px;
         content: "✖";
     }
 
@@ -209,7 +213,7 @@
                                 name="password">
                             <div id="passwordRequirementsModal" class="border mt-1">
                                 <p>Your password is not strong enough</p>
-                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                                <p id="passwordLength" class="invalid">Minimum <b>8 characters</b></p>
                                 <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
                                 <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
                                 <p id="number" class="invalid">A <b>number</b></p>
@@ -447,6 +451,7 @@
 
             $("#password").keyup(function () {
                 var passwordInputValue = $("#password").val();
+
                 // Validate lowercase letters
                 var lowerCaseLetters = /[a-z]/g;
                 if (passwordInputValue.match(lowerCaseLetters)) {
@@ -458,33 +463,43 @@
                 }
 
                 // Validate capital letters
-                // var upperCaseLetters = /[A-Z]/g;
-                // if (myInput.value.match(upperCaseLetters)) {
-                //     capital.classList.remove("invalid");
-                //     capital.classList.add("valid");
-                // } else {
-                //     capital.classList.remove("valid");
-                //     capital.classList.add("invalid");
-                // }
+                var upperCaseLetters = /[A-Z]/g;
+                if (passwordInputValue.match(upperCaseLetters)) {
+                    capital.classList.remove("invalid");
+                    capital.classList.add("valid");
+                } else {
+                    capital.classList.remove("valid");
+                    capital.classList.add("invalid");
+                }
 
-                // // Validate numbers
-                // var numbers = /[0-9]/g;
-                // if (myInput.value.match(numbers)) {
-                //     number.classList.remove("invalid");
-                //     number.classList.add("valid");
-                // } else {
-                //     number.classList.remove("valid");
-                //     number.classList.add("invalid");
-                // }
+                // Validate numbers
+                var numbers = /[0-9]/g;
+                if (passwordInputValue.match(numbers)) {
+                    number.classList.remove("invalid");
+                    number.classList.add("valid");
+                } else {
+                    number.classList.remove("valid");
+                    number.classList.add("invalid");
+                }
 
-                // // Validate length
-                // if (myInput.value.length >= 8) {
-                //     length.classList.remove("invalid");
-                //     length.classList.add("valid");
-                // } else {
-                //     length.classList.remove("valid");
-                //     length.classList.add("invalid");
-                // }
+                // Validate length
+                if (passwordInputValue.length >= 8) {
+                    passwordLength.classList.remove("invalid");
+                    passwordLength.classList.add("valid");
+                } else {
+                    passwordLength.classList.remove("valid");
+                    passwordLength.classList.add("invalid");
+                }
+
+                // Validate symbol
+                var symbols = /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/g
+                if (passwordInputValue.match(symbols)) {
+                    symbol.classList.remove("invalid");
+                    symbol.classList.add("valid")
+                } else {
+                    symbol.classList.remove("valid");
+                    symbol.classList.add("invalid");
+                }
             })
 
             var config = JSON.parse(
