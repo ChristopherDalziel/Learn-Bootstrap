@@ -94,6 +94,20 @@
         font-size: 12px;
     }
 
+    #loginBtn,
+    #loginToBtn,
+    #signUpBtn {
+        background-color: var(--anz-primary-blue);
+        color: var(--white);
+    }
+
+    #loginBtn:hover,
+    #loginToBtn:hover,
+    #signUpBtn:hover {
+        background-color: var(--white);
+        color: var(--anz-primary-blue);
+    }
+
     #modalBackground {
         -webkit-filter: blur(2px);
         -moz-filter: blur(2px);
@@ -385,7 +399,8 @@
         </div>
         <div class="help3 border-bottom mt-2">
             <h4 class="mt-2"><span class="icon oi oi-person"></span>You're already a ABC customer?</h4>
-            <a class="btn btn-light btn-sm btn-block mb-3" tabindex="-1" role="button" aria-disabled="true">Log
+            <a id="loginToBtn" class="btn btn-light btn-sm btn-block mb-3" tabindex="-1" role="button"
+                aria-disabled="true">Log
                 in to ABC Internet
             </a>
         </div>
