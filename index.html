@@ -10,6 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <script type="text/javascript"
+        src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -223,7 +228,7 @@
                         <div class="form-group my-4">
                             <label for="password">Create your password</label>
                             <input type="password" class="form-control password" id="password" placeholder="Password..."
-                                name="password">
+                                name="password" data-toggle="password">
                             <div id="passwordRequirementsModal" class="border mt-1">
                                 <p>Your password is not strong enough</p>
                                 <p id="passwordLength" class="invalid">Minimum <b>8 characters</b></p>
@@ -236,7 +241,7 @@
                         <div class="form-group my-4">
                             <label for="password2">Confirm your password</label>
                             <input type="password" class="form-control password" id="password2"
-                                placeholder="Confirm your password..." name="password">
+                                placeholder="Confirm your password..." name="password" data-toggle="password">
                         </div>
                         <div class="form-group mb-5">
                             <div class="form-check">
@@ -455,7 +460,7 @@
                 $("#passwordResetForm").show();
             })
 
-            $("#password").focus(function () {
+            $("#password").blur(function () {
                 $("#passwordRequirementsModal").css("display", "block");
             })
 
